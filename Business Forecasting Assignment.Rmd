@@ -1,0 +1,235 @@
+---
+title: "Business Forecasting Assignment"
+author: "Deepthi JahanMohan"
+date: "20/09/2025"
+output: html_document
+---
+# Creating a Employee Survey
+
+```{r}
+```{r setup-libs, include=FALSE}
+# Load required libraries
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+```{r setup, include=FALSE}
+EmployeeSurvey <- read.csv("EmployeeSurvey.csv")
+
+
+
+EmployeeSurvey
+
+# Summary
+summary(EmployeeSurvey)
+```
+summary(EmployeeSurvey)
+
+```{r}
+min(EmployeeSurvey$Age)
+```
+min(EmployeeSurvey$Age)
+
+```{r}
+max(EmployeeSurvey$Age)
+```
+
+max(EmployeeSurvey$Age)
+```{r}
+range(EmployeeSurvey$Age)
+```
+
+range(EmployeeSurvey$Age)
+```{r}
+str(EmployeeSurvey)
+```
+str(EmployeeSurvey)
+
+```{r}
+# Box Plot Columns
+
+boxplot(EmployeeSurvey$Age)
+```
+
+boxplot(EmployeeSurvey$Age)
+```{r}
+boxplot(EmployeeSurvey$Gender)
+```
+boxplot(EmployeeSurvey$Gender)
+
+```{r}
+boxplot(EmployeeSurvey$JobSatisfaction)
+```
+boxplot(EmployeeSurvey$JobSatisfaction)
+
+```{r}
+boxplot(EmployeeSurvey$ImpCharacteristics)
+```
+boxplot(EmployeeSurvey$ImpCharacteristics)
+
+```{r}
+boxplot(EmployeeSurvey$YearsinJob)
+```
+boxplot(EmployeeSurvey$YearsinJob)
+
+```{r}
+boxplot(EmployeeSurvey$Promotion)
+```
+boxplot(EmployeeSurvey$Promotion)
+
+```{r}
+boxplot(EmployeeSurvey$DecisionMaking)
+```
+boxplot(EmployeeSurvey$DecisionMaking)
+
+```{r}
+boxplot(EmployeeSurvey$BudgetDecisionMaking)
+```
+
+boxplot(EmployeeSurvey$BudgetDecisionMaking)
+```{r}
+boxplot(EmployeeSurvey$BudgetDecisionMaking)
+```
+boxplot(EmployeeSurvey$BudgetDecisionMaking)
+
+```{r}
+boxplot(EmployeeSurvey$Organization)
+```
+
+boxplot(EmployeeSurvey$Organization)
+```{r}
+boxplot(EmployeeSurvey$JobImpact)
+```
+boxplot(EmployeeSurvey$JobImpact)
+
+```{r}
+boxplot(EmployeeSurvey$Workplace)
+```
+boxplot(EmployeeSurvey$Workplace)
+
+```{r}
+# Graphing
+
+barplot(EmployeeSurvey$Age, main = "Age of Employees", xlab = "Employees", ylab = "Age", col = "Blue")
+```
+
+barplot(EmployeeSurvey$Age, main = "Age of Employees", xlab = "Employees", ylab = "Age", col = "Blue")
+```{r}
+barplot(EmployeeSurvey$Gender, main = "Gender of Employees", xlab = "Employees", ylab = "Gender", col = "Green")
+```
+
+barplot(EmployeeSurvey$Gender, main = "Gender of Employees", xlab = "Employees", ylab = "Gender", col = "Green")
+```{r}
+barplot(EmployeeSurvey$JobSatisfaction, main = "Satisfaction Level", xlab = "Employees", ylab = "Satisfaction", col = "Yellow")
+```
+barplot(EmployeeSurvey$JobSatisfaction, main = "Satisfaction Level", xlab = "Employees", ylab = "Satisfaction", col = "Yellow")
+
+```{r}
+barplot(EmployeeSurvey$ImpCharacteristics, main = "Job Characteristics", xlab = "Employees", ylab = "Characteristics", col = "Grey")
+```
+
+barplot(EmployeeSurvey$ImpCharacteristics, main = "Job Characteristics", xlab = "Employees", ylab = "Characteristics", col = "Grey")
+```{r}
+barplot(EmployeeSurvey$YearsinJob, main = "Years in the Job", xlab = "Employees", ylab = "Years", col = "Pink")
+```
+barplot(EmployeeSurvey$YearsinJob, main = "Years in the Job", xlab = "Employees", ylab = "Years", col = "Pink")
+
+```{r}
+hist(EmployeeSurvey$Promotion, main = "Promotion Level", xlab = "Employees", ylab = "Promotion", col = "Red")
+```
+
+hist(EmployeeSurvey$Promotion, main = "Promotion Level", xlab = "Employees", ylab = "Promotion", col = "Red")
+```{r}
+hist(EmployeeSurvey$DecisionMaking, main = "Decision Level", xlab = "Employees", ylab = "Decision Making", col = "Orange")
+```
+
+hist(EmployeeSurvey$DecisionMaking, main = "Decision Level", xlab = "Employees", ylab = "Decision Making", col = "Orange")
+```{r}
+hist(EmployeeSurvey$BudgetDecisionMaking, main = "Budget Level", xlab = "Employees", ylab = "Budget Decision", col = "Purple")
+```
+hist(EmployeeSurvey$BudgetDecisionMaking, main = "Budget Level", xlab = "Employees", ylab = "Budget Decision", col = "Purple")
+
+```{r}
+hist(EmployeeSurvey$Organization, main = "Company", xlab = "Employees", ylab = "Organization", col = "White")
+```
+
+hist(EmployeeSurvey$Organization, main = "Company", xlab = "Employees", ylab = "Organization", col = "White")
+```{r}
+hist(EmployeeSurvey$JobImpact, main = "Impact Level", xlab = "Employees", ylab = "Impacation", col = "Brown")
+```
+hist(EmployeeSurvey$JobImpact, main = "Impact Level", xlab = "Employees", ylab = "Impacation", col = "Brown")
+
+```{r}
+hist(EmployeeSurvey$Workplace, main = "Place", xlab = "Employees", ylab = "Worplace", col = "Grey")
+```
+
+hist(EmployeeSurvey$Workplace, main = "Place", xlab = "Employees", ylab = "Worplace", col = "Grey")
+```{r}
+
+
+# Columns
+
+EmployeeSurvey$Age <- as.factor(EmployeeSurvey$Age)
+class(EmployeeSurvey$Age)
+```
+class(EmployeeSurvey$Age)
+
+```{r}
+EmployeeSurvey$Gender <- as.factor(EmployeeSurvey$Gender)
+class(EmployeeSurvey$Gender)
+```
+
+class(EmployeeSurvey$Gender)
+```{r}
+EmployeeSurvey$YearsinJob <- as.factor(EmployeeSurvey$YearsinJob)
+class(EmployeeSurvey$YearsinJob)
+```
+class(EmployeeSurvey$YearsinJob)
+
+```{r}
+str(EmployeeSurvey)
+```
+str(EmployeeSurvey)
+
+```{r}
+EmployeeSurvey$Age <- as.numeric(EmployeeSurvey$Age)
+class(EmployeeSurvey$Age)
+```
+class(EmployeeSurvey$Age)
+
+```{r}
+EmployeeSurvey$Organization <- as.factor(EmployeeSurvey$Organization)
+class(EmployeeSurvey$Organization)
+```
+class(EmployeeSurvey$Organization)
+
+```{r}
+str(EmployeeSurvey)
+```
+str(EmployeeSurvey)
+
+```{r}
+
+
+
+# Scatter Plots
+
+plot(EmployeeSurvey$Age, EmployeeSurvey$Gender, main = "Age VS Gender", xlab = "Age", ylab = "Gender", col = "Blue")
+```
+
+plot(EmployeeSurvey$Age, EmployeeSurvey$Gender, main = "Age VS Gender", xlab = "Age", ylab = "Gender", col = "Blue")
+```{r}
+plot(x=EmployeeSurvey$Age,y=EmployeeSurvey$Gender, main = "Age VS Gender", xlab = "Age", ylab = "Gender")
+```
+plot(x=EmployeeSurvey$Age,y=EmployeeSurvey$Gender, main = "Age VS Gender", xlab = "Age", ylab = "Gender")
+
+```{r}
+plot(x=EmployeeSurvey$JobSatisfaction, y=EmployeeSurvey$YearsinJob, main = "Satisfaction Level VS Years in Job", xlab = "Job Satisfaction", ylab = "Years")
+```
+plot(x=EmployeeSurvey$JobSatisfaction, y=EmployeeSurvey$YearsinJob, main = "Satisfaction Level VS Years in Job", xlab = "Job Satisfaction", ylab = "Years")
+
+```{r}
+plot(x=EmployeeSurvey$DecisionMaking, y=EmployeeSurvey$BudgetDecisionMaking, main = "Budget VS Decision Making", xlab = "Decision Making", ylab = "Budget Decision making")
+```
+plot(x=EmployeeSurvey$DecisionMaking, y=EmployeeSurvey$BudgetDecisionMaking, main = "Budget VS Decision Making", xlab = "Decision Making", ylab = "Budget Decision making")
+
+```{r}
+
